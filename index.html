@@ -3,7 +3,7 @@
 
 <head>
     <link rel="icon" href="favicon.ico"/>
-    <title>心有灵犀一点通</title>
+    <title>灵犀一点通</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="generator" content="Zoho Sites 2.0, #">
@@ -17,22 +17,117 @@
     <link href="static/css/zsite-core.css" rel="stylesheet" type="text/css">
     <link href="static/css/style.css" rel="stylesheet" type="text/css">
     <link href="static/css/sub-style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="static/css/webfonts.css">
+    <!-- <link rel="stylesheet" type="text/css" href="static/css/webfonts.css"> -->
     <link href="#" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" type="text/css" href="static/css/lbtcss.css">
+    <script type="text/javascript" src="static/js/Lbttween.js"></script>
 
     <script src="static/js/zsite-core.js" defer=""></script>
-    <script src="static/js/header.js" defer=""></script>
+    <!-- <script src="static/js/header.js" defer=""></script> -->
 
 </head>
 <style>
-    .wryh{
-        font-family:"Microsoft YaHei";
-        color: #e20c0c
-    }
+
+#popup{
+width: 500px;
+height: 800px;
+position: fixed;
+top: 30%;
+left: 50%;
+margin-top:-150px;
+margin-left:-250px;
+display: none;
+background-color: #fff;
+border: 1px solid #ccc;
+box-shadow: 0 0 10px #ccc;
+z-index: 9999;
+}
+#popup img{
+width: 100%;
+height: 100%;
+}
+.popup_close{
+position: absolute;
+top: 10px;
+right: 10px;
+cursor: pointer;
+}
+
+#topdiv{
+    /* width: 980px;
+    height: 100px; */
+    font-family: Palatino Linotype;
+    color: #000000;
+    text-align:center; 
+    background-color: #fff;
+    position: fixed;
+    /* top: 0;
+    left: 0; */
+    opacity: 0.6;
+    width: 100%;
+    z-index: 99999; 
+}
+@keyframes blink {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+    color: rgb(255, 0, 51);
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.text-blink {
+  animation: blink 3s infinite linear;
+}
+
 </style>
+<script>
+    function playaud() {
+     
+        // // document.addEventListener('DOMContentLoaded', function() {
+         var audio = document.getElementById('yinyueplaya');
+        // function audioAutoPlay() {
+        //     audio.play();
+        //     document.addEventListener("WeixinJSBridgeReady", function(){
+        //     audio.play();
+        // }, false);
+        // }
+        // audioAutoPlay();
+        // // });
+
+        if (document.getElementById('lbtdiv').style.display == 'none'){
+            document.getElementById('lbtdiv').style.display='block'
+        }else{
+            document.getElementById('lbtdiv').style.display='none'
+        }
+
+        if(audio.paused) {
+            document.getElementById("playbutn").innerHTML = "⏸♪ ";
+            audio.play();
+            
+            // pauseBtn.innerHTML = '暂停';
+        } else {
+            document.getElementById("playbutn").innerHTML = "⏯♪ ";
+            audio.pause();
+            // pauseBtn.innerHTML = '播放';
+        }
+
+
+    }
+
+</script>
+
 <body>
-    <div data-headercontainer="zptheme-data-headercontainer" class="zpheader-style-01 theme-header-fixed "
+    <audio id ='yinyueplaya' autoplay  src="yssa.mp3" loop="loop"></audio>
+    <div id="popup">
+        <img id="img1" src="tp1.jpg"/>
+        <span class="popup_close" onclick="document.getElementById('popup').style.display='none'" style="font-size: 20px;color: rgb(245, 65, 141);">X</span>
+    </div>
+
+    <!-- <div data-headercontainer="zptheme-data-headercontainer" class="zpheader-style-01 theme-header-fixed "
         data-headercontainer="zptheme-data-headercontainer" class="zpheader-style-01 ">
         <div class="theme-header " data-header="zptheme-data-header" data-dark-part-applied="false"
             data-banner-base-header="theme-banner-base-header">
@@ -44,15 +139,27 @@
                 </div>
             </div>
         </div>
-        <div
+         <div
             class="theme-responsive-menu-area theme-navigation-and-icons zpcontainer theme-hide-burgericon-cart-mobile">
             <div class="theme-responsive-menu-container" data-zp-burger-clickable-area="mymenu1">
                 <span class="theme-burger-icon" data-zp-theme-burger-icon="mymenu1"></span>
             </div>
             <div class="theme-responsive-menu theme-menu-area" data-zp-responsive-container="mymenu1"></div>
-        </div>
-    </div>
-    </div>
+        </div> 
+    </div> -->
+
+
+
+
+
+    
+    <div id="topdiv" ><span class="text-blink"> Meeting Of Minds </span></div>
+
+
+
+
+    
+
     <div data-themebanner="zptheme-banner" class="theme-banner zphero-full-screen ">
         <div class="zpcontent-container hero-container ">
             <div data-element-id="elm_v5QgN7mJR2Oi5hONj0xIag" class="zphero " data-transition="slide_left"
@@ -81,16 +188,15 @@
                                                 border-style: none;
                                             }
                                         </style>
-                                        <!-- <div data-element-id="elm_9q89Wj6NCc24xmVFqAufyQ" data-element-type="heading"
+                                        <div data-element-id="elm_9q89Wj6NCc24xmVFqAufyQ" data-element-type="heading"
                                             class="zpelement zpelem-heading ">
 
-                                            <h4 
-                                                data-editor="true" style="color:rgb(245, 65, 141);">心有灵犀一点通<br></h4>
-                                        </div> -->
-                                        <div data-element-id="elm_b9w9XUGnTYydgupgXnvKQQ" data-element-type="heading"
-                                            class="zpelement zpelem-heading " style="font-family:Microsoft YaHei;color: #ce0e01;font-size: 30px;"
-                                                data-editor="true">如果前世的一千次回眸，才换得今生的一次擦肩而过<br><br><span
-                                                    >那么今生的一千次擦肩而过，能否换得一个微信号</span>
+                                            <h5 data-editor="true" style="font-family:FZYaoti;color:rgb(245, 65, 141);">改自《回眸》<br></h5>
+                                        </div>
+                                        <div data-element-id="elm_b9w9XUGnTYydgupgXnvKQQ" data-element-type="heading"s
+                                            class="zpelement zpelem-heading " style="font-family:FZYaoti;color: #000000;font-size: 30px;"
+                                                data-editor="true">前世的500次回眸换得今生的一次擦肩而过<br><br>
+                                                <span>今生的500次擦肩而过能否换得一个微信号^▽^</span>
                                         </div>
                                         <div data-element-id="elm_QqMs8IapkQI4eKU2bp0D_g" data-element-type="spacer"
                                             class="zpelement zpelem-spacer ">
@@ -115,7 +221,7 @@
                                                     border-radius: 1px;
                                                 }
                                             </style>
-                                            <div class="zptext zptext-align-left " data-editor="true" style="font-family:FZYaoti;color: #dd0081b7;font-size: 20px;">缘分就是在正确的时间和正确的地点，遇到到正确的人... ...
+                                            <div class="zptext zptext-align-left " data-editor="true" style="font-family:FZYaoti;color: #dd0081b7;font-size: 20px;">缘分可能就是在正确的时间和正确的地点，遇到正确的人... ...
                                             <span><br>微信号：ZQDSJHDDYDZQDR</span>
                                             </div>
                                         </div>
@@ -259,7 +365,7 @@
                                                 border-style: none;
                                             }
                                         </style>
-                                        <div class="zptext zptext-align-left " data-editor="true">
+                                        <div class="zptext zptext-align-left " data-editor="true" style="font-family: Lucida Handwriting;">
                                             <p>I love waking up in the morning not knowing what's gonna happen… 
                                                 or who I'm gonna meet… where I'm gonna wind up.</p>
                                         </div>
@@ -415,8 +521,9 @@
                                                                             box-shadow: 0px 0px 0px 0px #000000;
                                                                         }
                                                                     </style>
-                                                                    <h2 class="zpheading zpheading-style-type1 zpheading-align-center "
-                                                                        data-editor="true">拐角处.相遇</h2><div class="zpheading zpheading-style-type1 zpheading-align-center "> <img src="ws.jpg" alt="" title="" /></div>
+                                                                    <h5 class="zpheading zpheading-style-type1 zpheading-align-center "
+                                                                        data-editor="true">转角处遇到微信二维码 </h5>
+                                                                        <div class="zpheading zpheading-style-type1 zpheading-align-center "> <img src="ws.jpg" alt="sdfsdf" title="biu biu" /></div>
                                                                 </div>
                                                                 <div data-element-id="elm_niUqzYGWP7tHgSf0M12VaQ"
                                                                     data-element-type="spacer"
@@ -458,12 +565,47 @@
                                                                                 border-radius: 1px;
                                                                                 box-shadow: 0px 0px 0px 0px #000000;
                                                                             }
-                                                                        </style><a
+                                                                        </style>
+                                                                        <!-- <a
                                                                             class="zpbutton-wrapper zpbutton zpbutton-type-secondary zpbutton-size-md zpbutton-style-none "
                                                                             href="#" target="_self">
-                                                                            <spanclass="zpbutton-content">GetQuote</span></a>
+                                                                            <span class="zpbutton-content">GetQuote</span></a> -->
+                                                                            <!-- <a class=" zpbutton-type-secondary zpbutton-size-md"
+                                                                            href="javascript:void(0)" onclick="document.getElementById('lbtaaa').style.display='block'">
+                                                                            <span class="zpbutton-content" style="color: rgb(87, 2, 37);">相遇</span></a> -->
+                                                                        <a class=" zpbutton-type-secondary zpbutton-size-md"
+                                                                            href="javascript:void(0)" onclick="playaud()">
+                                                                            <span id="playbutn" style="font-size: 22px;">⏯♪ </span>
+                                                                            <span class="zpbutton-content text-blink" style="color: #fffb06;font-family:FZShuTi;font-size: 18px;">再次.遇见 </span> ♫
+                                                                         </a>  
+                                                                            
+                                                                    </div>
+                                                                    <!-- <p><a href="javascript:void(0)" onclick="document.getElementById('popup').style.display='none'">弹出图片</a></p> -->
+                                                                </div>
+                                                                <!-- 显示轮播图 -->
+                                                                <div id="lbtdiv" class="banner" style="display: none;">
+                                                                    <div class="main">
+                                                                        <a href="javascript:;" class="btnPre"> < </a>
+                                                                        <a href="javascript:;" class="btnNext"> > </a>
+                                                                        <ul class="list">
+                                                                            <li>
+                                                                                <img src="img/gy1.jpg">
+                                                                            </li>
+                                                                           <li>
+                                                                                <img src="img/gy2.jpg">
+                                                                            </li>
+                                                                        </ul>
+                                                                        <nav class="nav">
+                                                                            <span></span>
+                                                                            <span></span>
+                                                                            <span></span>
+                                                                            <span></span>
+                                                                            <span></span>
+                                                                        </nav>
                                                                     </div>
                                                                 </div>
+
+
                                                                 <div data-element-id="elm_uBU9M7JQT5S-1KBvdjSnXw"
                                                                     data-element-type="text"
                                                                     class="zpelement zpelem-text ">
@@ -492,9 +634,12 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
+                                            
                                         </div>
+                                        
+          
 </body>
-
 </html>
