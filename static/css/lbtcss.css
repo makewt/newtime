@@ -14,7 +14,7 @@ a {
   text-decoration: none;
 }
 .banner {
-   margin:20px auto;
+   margin:0px auto;
    /* padding:135px 146px 202px 144px; */
    width: 400px;
  
@@ -69,7 +69,7 @@ a {
 }
 .list {
    width: 600%;
-   height: 320px;
+   height: 300px;
    margin-left: 0px;
 }
 .list li {
