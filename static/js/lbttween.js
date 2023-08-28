@@ -178,12 +178,12 @@ var Tween = {
         tab();
 
        /*定时器*/
-        oMain.timer=setInterval(toNext,2000);
+        oMain.timer=setInterval(toNext,4000);
         oMain.onmouseover=function(){
             clearInterval(oMain.timer);
         }
         oMain.onmouseout=function(){
-           oMain.timer=setInterval(toNext,2000);
+           oMain.timer=setInterval(toNext,4000);
         }
 
         /*鼠标移入导航*/
