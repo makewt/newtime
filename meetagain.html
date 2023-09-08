@@ -1,41 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <title>meet again</title>
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-
-
-
-
   <style>
-    /* #container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-} */
-
-    /* #butterfly {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: auto;
-  transition: all 0.5s ease-in-out;
-} */
-
-
-
-
-
-
-
-
-
     body {
-      background-color: lightblue;
+      background-color: rgba(255, 246, 251, 0.8);
     }
 
     #container {
@@ -57,7 +27,7 @@
       width: 20px;
       height: auto;
       transform-style: preserve-3d;
-      transition: all 2s ease-in-out;
+      transition: all 4s ease-in-out;
     }
 
     * .wing {
@@ -71,7 +41,6 @@
       background: url(butterfly.png) no-repeat;
       animation-name: rightwingani;
       animation-duration: 0.6s;
-      /* animation-delay: 0s; */
       animation-iteration-count: infinite;
       animation-timing-function: ease-out;
     }
@@ -111,8 +80,6 @@
       }
     }
 
-
-
     a {
       font-size: 5.5em;
       font-family: Arial;
@@ -128,30 +95,30 @@
       line-height: 1.1em;
     }
 
-
     .textfg1 {
       text-align: center;
       font-weight: 700;
-      letter-spacing: 0.5rem;
-      font-size: 6rem;
+      font-size: 55px;
       background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       -webkit-background-size: 200% 100%;
       -webkit-animation: maskedAnimation 4s infinite linear;
     }
+
     .textfg2 {
-      /* text-align: center; */
-      margin-left: 40px;
+      margin-left: 20px;
       font-weight: 500;
       letter-spacing: 0.2rem;
-      font-size: 20px;
-      background-image: -webkit-linear-gradient(left, #17051a54, #012831 25%, #04330c 50%, #022d33 75%, #ffffff);
+      font-size: 40px;
+      background-image: -webkit-linear-gradient(left, #17051a54, #012831 25%, #04330c 50%, #022d33 75%, #8d8989);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       -webkit-background-size: 200% 100%;
-      -webkit-animation: maskedAnimation 4s infinite linear;
+      -webkit-animation: maskedAnimation 5s infinite linear;
+
     }
+
     @keyframes maskedAnimation {
       0% {
         background-position: 0 0;
@@ -162,181 +129,176 @@
       }
     }
 
-    .wenti{
+    .wenti {
       margin-left: 10%;
       text-decoration: underline;
       font-weight: 500;
       letter-spacing: 0.2rem;
-      font-size: 50px;
-      /* background-image: -webkit-linear-gradient(left, #290c0c, #073844 25%, #04330c 50%, #362802 75%, #2e1111);
+      font-size: 40px;
+      background-image: -webkit-linear-gradient(left, #290c0c, #073844 25%, #04330c 50%, #362802 75%, #2e1111);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       -webkit-background-size: 200% 100%;
-      -webkit-animation: maskedAnimation 4s infinite linear; */
+      -webkit-animation: maskedAnimation 4s infinite linear;
     }
 
-    .dzj {
-      left: 10%;
-      /* 本例8个文字(加标点符号)；有多少个文字，width就是多少个em */
-      /* width: 200em; */
-      /* 加上两个动画，一个是打字动画，使用steps让字一个一个的出现，
-         注意step和字数保持一致，然后多一步用来丢弃，光标动画也是同理，*/
-      animation: typingWords 10s steps(50);
-      /* , cursor 0.5s steps(1) infinite; */
-      /* 要设置不允许换行，且溢出隐藏 */
-      white-space: nowrap;
-      overflow: hidden;
-      /* 使用右边框作为打印的指针光标 */
-      /* border-right: 1px solid #000; */
-    }
-
-    @keyframes typingWords {
-      0% {
-        width: 0;
-      }
-    }
-
-    @keyframes cursor {
-      50% {
-        border-color: transparent;
-      }
-    }
-
-    .line{
+    .line {
       background-image: linear-gradient(to right, rgb(0, 66, 121), rgb(255, 255, 255));
       background-position: left top;
       background-repeat: no-repeat;
       height: 3px;
-      
+
     }
+
+    .jumping-text {
+      margin-left: 50px;
+      animation: jump 1s infinite;
+      animation-delay: 2s;
+      }
+      @keyframes jump {
+      50% {
+        transform: translateY(-20%);
+      }
+      }
   </style>
-
-
 
 </head>
 
 <body>
-
-  <!-- <div id="container">
-    <img id="butterfly" src="butterfly.png"/>
-  </div> -->
-
-
-  <div class="textfg1" >你好，你可以叫我Mike
-    <div class="textfg1" style="font-size: 25px;" >我可以回答你以下问题<br></div>
+  <div class="textfg1">你好！你可以叫我Mike
+    <div class="textfg1" style="font-size: 30px;">👇🏼我可以回答你以下问题<br><br></div>
   </div>
 
   <div>
-    <div class="wenti" id="q1" onclick="onClick(1)">这是真实姓名吗？ </div>
+    <div class="wenti" id="q1" onclick="onClick(1)">mike这是真实姓名吗？</div>
     <div class="wenti" id="q4" onclick="onClick(5)">为什么要给我这个二维码？</div>
     <div class="wenti" id="q3" onclick="onClick(6)">你是本地人还是外地人呢？</div>
     <div class="wenti" id="q2" onclick="onClick(2)">你有多大了呢？</div>
-    <div class="wenti" id="q3" onclick="onClick(3)">你现在做什么工作？</div>
-    <div class="wenti" id="q4" onclick="onClick(4)">能说说你以前的工作？</div>
+    <div class="wenti" id="q3" onclick="onClick(3)">那你是做什么工作的呢？能透露收入吗？</div>
+    <div class="wenti" id="q4" onclick="onClick(4)">还跑步吗?🏃🏼‍♂️</div>
     <br>
     <div class="line"></div>
-    <br>
+  </div>
+
+  <div id="as">
+  </div>
+
+<br>
+  <div id="tishi"  style="display: block;font-size: 30px;margin-left: 80px;color: #580000;">
+    请点击上面问题获取答案！！！
   </div>
 
 
-  <div class="textfg2" id="as" >
-    <br>
+  <br>
+  <div class="line"></div>
+  <div style="text-align: center;font-family: '楷体';margin-top: 10px;"> 2023@www.xylxydt.cn
   </div>
-  
-  
+
   <div id="container">
     <div id="butterfly">
       <div class="left wing"></div>
       <div class="right wing"></div>
-
     </div>
   </div>
-
-
-
+  <audio id='audioplay' autoplay src="http://music.163.com/song/media/outer/url?id=1997742731.mp3" loop="loop"></audio>
 </body>
 
-
-
-
 <script>
+
+
 
   var container = document.getElementById('container');
   var image = document.getElementById('butterfly');
   var width = window.innerWidth;
   var height = window.innerHeight;
-  var i_time = 1
+  var isplay = false
   var hdflag = [0]
 
-  function moveImage() {
+  function moveImagezd() {
     var mydiv = document.getElementById('butterfly');
-    var maxTop = - Math.random() * window.innerHeight;
+    var maxTop = - Math.random() * document.body.scrollHeight;
     var maxLeft = Math.random() * window.innerWidth;
 
-    mydiv.style.marginTop = Math.random() * (maxTop) + 400 + 'px';
-    mydiv.style.marginLeft = Math.random() * (maxLeft) - 150 + 'px';
+    mydiv.style.marginTop = Math.random() * (maxTop) + 'px';
+    mydiv.style.marginLeft = Math.random() * (maxLeft) - 300 + 'px';
+  }
 
+  setInterval(moveImagezd, 4000);
 
+  function playaud() {
 
+    if (!isplay) {
+      var tishi = document.getElementById('tishi');
+      var auplay = document.getElementById("audioplay")
+      tishi.innerHTML =  '♪ ♪ ♪ ' +tishi.innerHTML + ' ♪ ♪ ♪'
+      tishi.className="jumping-text"
+      auplay.play()
+      isplay = true
+    }
+    
 
   }
-  setInterval(moveImage, 2000);
+
+  function onClick(e) {
 
 
-   function onClick(e){
     var p = document.createElement("p");
+    p.setAttribute('class', 'textfg2')
     var div = document.getElementById('as');
-    console.log(hdflag)
-    if (hdflag.includes(e)){
-      p.innerHTML = 'Mike:已经回答过了这个问题，哈哈哈，可以看看前面哦。'
-        div.appendChild(p);
-        return;
-    }
-   
 
-    switch (e){
-      case 1:       
-        p.innerHTML = 'Mike:当然了，mike是一个真实名字，只不过是英文名。名字只是个代号，不是吗？'       
+
+    if (hdflag.length < 2) {
+      var auplay = document.getElementById("audioplay")
+      auplay.play()
+
+    }
+
+    if (hdflag.length > 6) {
+      p.innerHTML = 'Mike:就这些简单的问题了，如果需要了解更多信息请添加微信获取吧。嘻嘻......<br>否则的话，就当个小玩笑，开心一下下，卡片扔掉，不过可别乱扔，污染环境...哒！'
+      div.prepend(p);
+      return;
+    }
+
+    if (hdflag.includes(e)) {
+      p.innerHTML = 'Mike:已经回答过了这个问题，哈哈哈，可以看看前面哦。'
+      div.prepend(p)
+      return;
+    }
+    switch (e) {
+      case 1:
+        p.innerHTML = 'Mike:当然了，mike是一个另一个真实的名字，以前上课时用的英文名，已经用习惯，当然，现在只是在网上用,名字只是个代号！'
         break;
       case 2:
-        p.innerHTML = 'Mike:不知道你像知道周岁还是虚岁，所有我告诉你，我出生于84年，对了，我属老鼠'      
+        p.innerHTML = 'Mike:不知道你想知道周岁还是虚岁，所有我可以告诉你，我是84年的老鼠！'
         break;
       case 3:
-        p.innerHTML = 'Mike:我在这附近一个医院上班，同济医院呢有听说过吗？目前我负责该医院的软件运维工作。'     
+        p.innerHTML = 'Mike:可以呀，我以前是做医疗软件开发，经常会出差，现在嘛不想再到处跑了\^o^/，所有选择在医院里做软件运维。<br>说到收入，能维持基本开支，一年稳定在16左右，其他不稳定就非常不稳定了，不做讨论，哈哈ˋ( ° ▽、° ) 。'
         break;
       case 4:
-        p.innerHTML = 'Mike:当然可以呀，我学的是计算机专业，以前我的工作就是给医院里面开发管理软件，比如HIS,EMR,LIS....等，看起来多，都是二次开发。'     
+        p.innerHTML = 'Mike:今年不跑了，明年再跑，可以一起跑呀，其实像你这样走走也不错，能喜欢这样走一走的女孩不多，保持住啦。👍'
         break;
       case 5:
-        p.innerHTML = 'Mike:有人说，前世的500次回眸换得今生的一次擦肩而过，我们从第一次见面到现在，我大概统计一下，有近500次的擦肩而过，所以，我想，这可能是一次与众不同的安排'     
+        p.innerHTML = 'Mike:有人说，前世的500次回眸换得今生的一次擦肩而过，何况从第一次见面到现在，我统计一下，大概也有近500次的擦肩而过吧，所以我在想，难道这是丘比特的安排吗？嘿嘿嘿，如果是，那不能让自己留下遗憾，是不是？'
         break;
       case 6:
-        p.innerHTML = 'Mike:两个都算吧，哈哈哈，老家云南，在杭州读书，所以毕业后留在这边工作。已经在这儿生活是十余年，如果没猜错的话，我们隔了一条马路，应该算得上邻居吧。'     
+        p.innerHTML = 'Mike:两个都算吧，哈哈哈，老家云南，高考后在杭州读书，所以毕业后留在这边工作。已经在这边生活了很多年，算半个家了吧，对了，如果没猜错的话，我们隔了一条马路，应该算得上邻居，嘿嘿😅。'
         break;
-      default :
+      default:
         p.innerHTML = 'Mike:抱歉，这个问题我还没有想到很好的答案。还是换个问题吧！'
-              
+
         break;
     }
-    div.appendChild(p);
+    div.prepend(p);
     hdflag.push(e)
-   }
-
-  
-
-  window.onload = function () {
-    // document.onmousedown = function (event) {
-    //   if (i_time < 3) {
-    //     i_time++
-    //     var t = document.getElementById('t' + i_time);
-    //     t.style.display = "block"
-    //   }
-    // }
 
   }
+  window.onload = function () {
 
+    document.onmousedown = function (event) {
+      playaud()
+    }
 
-
+  }
 </script>
 
 </html>
