@@ -173,8 +173,10 @@
     <div class="wenti" id="q3" onclick="onClick(6)">你是本地人还是外地人呢？</div>
     <div class="wenti" id="q2" onclick="onClick(2)">你有多大了呢？</div>
     <div class="wenti" id="q3" onclick="onClick(3)">可以说说工作和收入吗？</div>
+    <div class="wenti" id="q3" onclick="onClick(7)">有没有什么兴趣爱好？</div>
     <div class="wenti" id="q4" onclick="onClick(4)">还跑步吗?🏃🏼‍♂️</div>
     <br>
+    <a id="wxewm" style="font-size: 45px;display: none;margin-left: 6px;color: #009213;" href="https://thumbnail0.baidupcs.com/thumbnail/343077601j896cfb5252610ddd87b713?fid=1023504848-250528-295497092416543&time=1694311200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-CvUCzPWGPxw8IgLh0ATKwZ%2FtucI%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=90306729061349327&dp-callid=0&file_type=0&size=c710_u400&quality=100&vuk=-&ft=video">点击这里可加微信</a>
     <div class="line"></div>
   </div>
 
@@ -186,11 +188,16 @@
     请点击上面问题获取答案！
   </div>
 
-
+ 
   <br>
   <div class="line"></div>
   <div style="text-align: center;font-family: '楷体';margin-top: 30px;"> 2023@www.xylxydt.cn
   </div>
+
+
+    
+
+ 
 
   <div id="container">
     <div id="butterfly">
@@ -228,7 +235,7 @@
     if (!isplay) {
       var tishi = document.getElementById('tishi');
       var auplay = document.getElementById("audioplay")
-      tishi.innerHTML =  '♪ ♪ ♪ ' +tishi.innerHTML + ' ♪ ♪ ♪'
+      tishi.innerHTML =  '♪ ♪ ' +tishi.innerHTML + ' ♪ ♪'
       tishi.className="jumping-text"
       auplay.play()
       isplay = true
@@ -251,9 +258,17 @@
 
     }
 
-    if (hdflag.length > 6) {
-      p.innerHTML = 'Mike:就这些简单的问题了，如果需要了解更多信息请添加微信获取吧。嘻嘻......<br>否则的话，就当个小玩笑，开心一下下，卡片扔掉，不过可别乱扔，污染环境...哒！'
+    if (hdflag.length > 7) {
+      var wxewm = document.getElementById('wxewm');
+
+      if(wxewm.style.display =='block') {
+        return
+      }
+      wxewm.style.display = 'block';
+      p.innerHTML = 'Mike:就这些简单的问题了，如果需要了解更多信息请添加微信获取吧,😅......<br>否则的话，就当个小玩笑，开心一下下，卡片扔掉，不过可别乱扔哦,祝你开心！'
       div.prepend(p);
+      
+      
       return;
     }
 
@@ -280,6 +295,9 @@
         break;
       case 6:
         p.innerHTML = 'Mike:两个都算吧，哈哈哈，老家云南，高考后在杭州读书，所以毕业后留在这边工作。已经在这边生活了很多年，算半个家了吧，对了，如果没猜错的话，我们隔了一条马路，应该算得上邻居，嘿嘿(●ˇ∀ˇ●)。'
+        break;
+      case 7:
+        p.innerHTML = 'Mike:兴趣爱好，当然是玩啦，跑步、爬山，最喜欢的事就是出去呼吸新鲜空气(*^_^*)。喜欢钢琴，有在练，但没什么进展，可忽略。'
         break;
       default:
         p.innerHTML = 'Mike:抱歉，这个问题我还没有想到很好的答案。还是换个问题吧！'
